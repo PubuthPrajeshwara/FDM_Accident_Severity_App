@@ -7,9 +7,13 @@ import json
 import requests
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from streamlit_lottie import st_lottie
+import path
 
-# Load the saved XGBoost model
-model = joblib.load('./Xgb_model.joblib')  # Ensure this is an XGBoost model
+path_to_model = '/workspaces/FDM_Accident_Severity_App/xgb_model.joblib'
+
+with open(path_to_model, 'rb') as file:
+    model = joblib.load(file)
+
 feature_names = joblib.load('./feature_names.pkl')
 
 # Load the label encoders
