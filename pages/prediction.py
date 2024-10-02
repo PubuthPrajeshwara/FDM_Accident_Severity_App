@@ -16,7 +16,7 @@ with open(path_to_model, 'rb') as file:
 
 feature_names = joblib.load('./feature_names.pkl')
 
-# Load the label encoders
+# Load the label encoder
 label_encoders = {
     'Day_of_week': joblib.load('./Day_of_week_encoder.pkl'),
     'Age_band_of_driver': joblib.load('./Age_band_of_driver_encoder.pkl'),
